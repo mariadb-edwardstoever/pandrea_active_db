@@ -50,7 +50,7 @@ ELSE
  insert into tt_already_sold_tickets select event_id,ticket_price,venue_seat_id,venue_seat_common_id,now() from my_selected_tix;
 end if;
 
-do sleep(2);
+do sleep(1);
 end for;
 
 end;
