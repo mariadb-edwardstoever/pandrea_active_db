@@ -4,7 +4,7 @@ delimiter //
 begin not atomic
 declare qty,cust,evnt,start_set,fxfset,already_sold,tix,prchs,brcd integer;
 declare paym decimal(10,2);
-FOR ii IN 0..59
+FOR ii IN 0..30
 DO 
 
 
@@ -50,7 +50,7 @@ ELSE
  insert into tt_already_sold_tickets select event_id,ticket_price,venue_seat_id,venue_seat_common_id,now() from my_selected_tix;
 end if;
 
-do sleep(1);
+do sleep(2);
 end for;
 
 end;
